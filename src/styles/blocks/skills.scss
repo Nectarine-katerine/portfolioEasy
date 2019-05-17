@@ -1,5 +1,13 @@
-.skills, .skills__container {
-  min-height: 650px;
+.skills__container {
+  padding: 6.25rem 0;
+  
+  @include tablets {
+    max-width: 95%;
+  }
+
+  @include phones {
+    padding: 4.25rem 0;
+  }
 }
 
 .skills {
@@ -10,6 +18,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
+
+  @include tablets {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 
 .skills__item {
@@ -22,10 +35,10 @@
 
 .skills__headline {
   color: $blue;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .skills__desc {
@@ -34,14 +47,18 @@
 
 .skills__img {
   position: relative;
-  width: 139px;
-  height: 139px;
+  width: 8.6875rem;
+  height: 8.6875rem;
   background-image: url(../../img/sprite.png);
-  background-position: 15px 28px;
+  background-position: -4.5% -21%;
   background-repeat: no-repeat;
   border-radius: 100%;
   transition: background-color 0.1s;
   /* transition: background-position 0.1s; */
+
+  @include laptop {
+    background-position: -3% -17%;
+  }
 }
 
 .skills__img:hover {
@@ -55,11 +72,16 @@
 .skills__img::before {
   content: "";
   position: absolute;
-  width: 137px;
-  height: 135px;
+  width: 8.5625rem;
+  height: 8.4375rem;
   border: 2px solid $blue;
   border-radius: 100%;
   transform: translate(-50%, 0%);
+
+  @include phones {
+    width: 7.6rem;
+    height: 7.6rem;
+  }
 }
 
 

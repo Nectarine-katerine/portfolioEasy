@@ -1,21 +1,33 @@
 .footer {
-  background: url(../../img/bg__foo.png) center center no-repeat;
-  min-height: 240px;
+  background: url(../../img/bg__foo.png) center center / cover no-repeat;
 }
 
 .footer__container {
-  min-height: 240px;
+  padding: 3.75rem 0;
   flex-direction: row;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .footer__text, .footer__desc, .footer__title {
   display: inline-block;
   color: #fff;
-  font-size: 50px;
+  font-size: 3.125rem;
+
+  @include tablets {
+    font-size: 1rem;
+  }
 }
 
 .footer__text {
-  margin-right: 54px;
+  margin-right: 3.375rem;
+
+  @include tablets {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 }
 
 .footer__title {

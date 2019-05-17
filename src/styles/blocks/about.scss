@@ -1,5 +1,9 @@
-.about, .about__container {
-  min-height: 390px;
+.about__container {
+  padding: 8.125rem 0;
+
+  @include phones {
+    padding: 6.125rem 0;
+  }
 }
 
 .about__text {
